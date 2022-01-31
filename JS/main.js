@@ -7,7 +7,7 @@ const createGridElement = () => {
 }
 
 
-for (let i = 1; i<=64; i++) {
+for (let i = 1; i<=100; i++) {
 
     const node = createGridElement();
 
