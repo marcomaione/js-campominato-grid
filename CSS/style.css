@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+.debug {
+    border: solid 1px black;
+}
 
 
 #navbar {
@@ -43,21 +46,29 @@
 
 #green {
     background-color: lightgreen;
-    height:100vh;
 }
 
 .container {
     width: 500px;
     height: 500px;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .square {
     border: solid 1px white;
     width: calc(100% / 10);
-    height: calc(100% / 10);
+    height: 50px;
+    float: left;
+}
+
+#grid::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.clicca {
+    background-color: rgb(26, 156, 231);
 }
 
 #footer {
