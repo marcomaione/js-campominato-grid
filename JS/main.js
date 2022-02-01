@@ -48,15 +48,20 @@ function play() {
     
             nodo.innerText = i;
         
-            nodo.addEventListener('click', function (){
-        
-                this.classList.add('clicked');
-            });
+            nodo.addEventListener('click', handleCellClick);
         
             gioco.appendChild(nodo);
         }
         console.log("hai scelto" + cellePerRiga + "celle");
+        return true;
     
+    }
+
+    function handleCellClick() {
+        this.classList.add('clicked');
+        console.log("hai premuto il numero" + this.innerText);
+        // rimuovo la possibilita di cliccare piu volte la stessa casella
+        this.removeEventListener('click' , handleCellClick );
     }
 }
 
