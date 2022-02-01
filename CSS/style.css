@@ -30,7 +30,7 @@ header::after {
     vertical-align: middle;
 }
 
-.difficoltà {
+.difficolta {
     float: right;
     padding-right: 80px;
     padding-top: 20px;
@@ -63,8 +63,11 @@ main {
     float: left;
     width: calc(100% / 8);
     height: calc(100% / 8);
-    border: solid 1px white;
+    border: solid 1px black;
+}
 
+.clicked {
+    background-color: rgb(55, 151, 211);
 }
 
 /*footer*/
