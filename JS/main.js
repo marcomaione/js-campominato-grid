@@ -24,34 +24,41 @@ function play() {
         
     }
 
-    cellePerRiga = Math.sqrt(numeroCelle);
-
-    console.log("hai scelto" + cellePerRiga + "celle");
-
-    const gioco = document.getElementById('gioco')
-
-    //reset del gioco
+    const gioco = document.getElementById('gioco');
 
     gioco.innerHTML = "";
 
+    //reset del gioco
 
-    for ( let i = 1; i <= numeroCelle; i++) {
+    generaCampoGioco(numeroCelle);
 
-        const nodo = document.createElement('div')
-        nodo.classList.add('quadrato');
+    function generaCampoGioco(numeroCelle) {
 
-        const dimensione = `calc(100% / ${cellePerRiga })`;
-
-        nodo.style.width = dimensione;
-        nodo.style.height = dimensione;
-
-        nodo.innerText = i;
+        cellePerRiga = Math.sqrt(numeroCelle);
     
-        nodo.addEventListener('click', function (){
+        for ( let i = 1; i <= numeroCelle; i++) {
     
-            this.classList.add('clicked');
-        });
+            const nodo = document.createElement('div')
+            nodo.classList.add('quadrato');
     
-        gioco.appendChild(nodo);
+            const dimensione = `calc(100% / ${cellePerRiga })`;
+    
+            nodo.style.width = dimensione;
+            nodo.style.height = dimensione;
+    
+            nodo.innerText = i;
+        
+            nodo.addEventListener('click', function (){
+        
+                this.classList.add('clicked');
+            });
+        
+            gioco.appendChild(nodo);
+        }
+        console.log("hai scelto" + cellePerRiga + "celle");
+    
     }
 }
+
+
+
