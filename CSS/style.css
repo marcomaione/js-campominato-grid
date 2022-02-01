@@ -61,8 +61,6 @@ main {
 
 .quadrato {
     float: left;
-    width: calc(100% / 8);
-    height: calc(100% / 8);
     border: solid 1px black;
 }
 
